@@ -1,2 +1,2 @@
-# niketuson.github.io
+# NikeTuson
 Web-technology exercises
