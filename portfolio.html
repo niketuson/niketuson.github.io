@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Lomake-Tehtava</title>
+    <meta charset="UTF-8">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --cream: #f5efe6;
+            --warm: #d4956a;
+            --dark: #2c1f14;
+            --mid: #7a5c44;
+            --light: #ede0d0;
+            --accent: #b05c2a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #3b2312;
+            background-image:
+                url(https://cdn.corporatefinanceinstitute.com/assets/money-2.jpeg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(30, 15, 5, 0.65);
+            z-index: 0;
+        }
+
+        form {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 560px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        fieldset {
+            background: rgba(245, 239, 230, 0.96);
+            border: 1px solid var(--warm);
+            border-radius: 4px;
+            padding: 28px 32px 32px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            animation: fadeUp 0.6s ease both;
+        }
+
+        fieldset:nth-of-type(2) {
+            animation-delay: 0.15s;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        legend {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.04em;
+            padding: 0 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 18px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        label {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--mid);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px 14px;
+            background: white;
+            border: 1px solid #d6c4b0;
+            border-radius: 3px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.92rem;
+            color: var(--dark);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--warm);
+            box-shadow: 0 0 0 3px rgba(212, 149, 106, 0.18);
+        }
+
+        input::placeholder {
+            color: #bba98e;
+            font-weight: 300;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 140px;
+            line-height: 1.6;
+        }
+
+        .contact-method {
+            background: var(--light);
+            border-radius: 3px;
+            padding: 14px 16px;
+            border: 1px solid #d6c4b0;
+        }
+
+        .contact-method>label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 0.88rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--mid);
+        }
+
+        .submit-group {
+            margin-top: 22px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 13px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(176, 92, 42, 0.35);
+        }
+
+        input[type="submit"]:hover {
+            background: #933f14;
+            box-shadow: 0 6px 20px rgba(176, 92, 42, 0.5);
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <fieldset>
+            <legend>Contact information</legend>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" placeholder="First name">
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" placeholder="Last name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="tphon">Telephone</label>
+                <input type="tel" id="tphon" placeholder="123-456-7890">
+            </div>
+
+            <div class="form-group contact-method">
+                <label>Preferred contact method</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="emailcontact" name="contact">
+                    <label for="emailcontact">Email</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="phonecontact" name="contact">
+                    <label for="phonecontact">Telephone</label>
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback</legend>
+
+            <div class="form-group">
+                <label for="subject">Message subject</label>
+                <input type="text" id="subject" placeholder="Subject">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="attachfile">Attach a file</label>
+                <input type="file" id="attachfile">
+            </div>
+
+            <div class="form-group submit-group">
+                <input type="submit" value="Send message">
+            </div>
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
