@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title> Lomake-Tehtava</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <fieldset>
+            <legend> Contact information:</legend>
+            <table>
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td><input type="text"></td>
+                    <td rowspan="2">
+                        <label> Preferred contact method:</label><br>
+                        <input type="checkbox" id="emailcontact" name="contact">
+                        <label for="emailcontact">Email</label><br>
+
+                        <input type="checkbox" id="phonecontact" name="contact">
+                        <label for="phonecontact">Telephone</label>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td><input type="text" id="lname"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="tphon">Telephone</label></td>
+                    <td><input type="tel" id="tphon"></td>
+
+                </tr>
+
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback:</legend>
+            <table>
+                <tr>
+                    <td><label for="fname">Message subject:</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <textarea id="message" name="message" rows="20" cols="70"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="attachfile">Attach a file:</label></td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td><input type="Submit"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+    </form>
+
+
+</body>
+
+</html>
