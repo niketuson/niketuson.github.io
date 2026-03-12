@@ -1,0 +1,13 @@
+body {
+    background-color: burlywood;
+    background-image: url(https://cdn.corporatefinanceinstitute.com/assets/money-2.jpeg);
+}
+
+fieldset {
+    background-color: bisque;
+    border-color: black;
+}
+
+label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
